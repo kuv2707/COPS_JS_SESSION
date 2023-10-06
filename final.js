@@ -24,25 +24,34 @@ const taskTitleInput = document.querySelector(".task-title-input");
 
 function taskAddHandler() {
 	const title = taskTitleInput.value;
-	taskTitleInput.value = "";
+	resetInputTaker()
 	const task = new Task(title);
+	console.log(task)
 	appendNewTask(task);
+}
+
+function resetInputTaker()
+{
+	taskTitleInput.value = "";
+	taskAddButton.disabled=true;
 }
 
 taskAddButton.addEventListener("click", taskAddHandler);
 
-taskTitleInput.addEventListener("keydown", function (e) {
+taskTitleInput.addEventListener("keyup", function (e) {
 	//cannot use keypress as it does not work for backspace
 	if (taskTitleInput.value === "") {
 		taskAddButton.disabled = true;
 	} else {
 		taskAddButton.disabled = false;
-
-		if (e.key === "Enter") {
-			taskAddHandler();
-		}
 	}
 });
+
+taskTitleInput.addEventListener("keydown",function(){
+	if (e.key === "Enter") {
+		taskAddHandler();
+	}
+})
 
 /**
  * Add the task object to tasks array, save it, and render it on the dom

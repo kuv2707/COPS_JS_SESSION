@@ -1,95 +1,107 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+	background: linear-gradient(135deg, #4b6cb7, #142546);
+	color: white;
 
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
 .heading {
-    font-size: 36px;
-    color: #007bff;
-    margin-bottom: 20px;
+	font-size: 36px;
+	color: #007bff;
+    background:white;
+    padding:15px;
+    border-radius: 15px;
+	margin-bottom: 20px;
 }
 
 .task-input-container {
-    display: flex;
-    margin-bottom: 20px;
+	display: flex;
+	margin-bottom: 20px;
 }
 
 .task-title-input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    margin-right: 10px;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ced4da;
+	border-radius: 4px;
+	margin-right: 10px;
 }
 
 .task-add-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+    transition: background-color 250ms;
+}
+
+.task-add-button:disabled {
+	background-color: grey;
 }
 
 .tasks-container {
-    width: 300px;
+	width: 300px;
 }
 
 .task-entry {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    animation: fadeIn 500ms ease-in-out;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	animation: fadeIn 500ms ease-in-out;
 }
 @keyframes fadeIn {
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .task-done {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .task-title {
-    font-size: 16px;
-    flex: 1;
+	font-size: 16px;
+	flex: 1;
+    color:black;
 }
 
 .task-delete {
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
+	background-color: #ff6b6b;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 5px 10px;
+	cursor: pointer;
+    transition: background-color 250ms;
 }
 
 .task-delete:hover {
-    background-color: #e74c3c;
+	background-color: #c13929;
 }
 
-.strike-through{
-    text-decoration: line-through;
+.strike-through {
+	text-decoration: line-through;
 }
 
-
-::selection{
-    background-color: #031314;
-    color: white;
+::selection {
+	background-color: #012268;
+	color: white;
 }
+
