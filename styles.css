@@ -29,7 +29,7 @@ body {
     margin-right: 10px;
 }
 
-.task-add {
+.task-add-button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -51,6 +51,15 @@ body {
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    animation: fadeIn 500ms ease-in-out;
+}
+@keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
 }
 
 .task-done {
@@ -73,4 +82,14 @@ body {
 
 .task-delete:hover {
     background-color: #e74c3c;
+}
+
+.strike-through{
+    text-decoration: line-through;
+}
+
+
+::selection{
+    background-color: #031314;
+    color: white;
 }
