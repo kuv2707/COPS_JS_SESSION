@@ -47,6 +47,7 @@ body {
 
 .task-add-button:disabled {
 	background-color: grey;
+	cursor: not-allowed;
 }
 
 .tasks-container {

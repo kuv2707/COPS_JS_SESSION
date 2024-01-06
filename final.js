@@ -24,16 +24,16 @@ const taskTitleInput = document.querySelector(".task-title-input");
 
 function taskAddHandler() {
 	const title = taskTitleInput.value;
-	resetInputTaker()
+	if (title === "") return;
+	resetInputTaker();
 	const task = new Task(title);
-	console.log(task)
+	console.log(task);
 	appendNewTask(task);
 }
 
-function resetInputTaker()
-{
+function resetInputTaker() {
 	taskTitleInput.value = "";
-	taskAddButton.disabled=true;
+	taskAddButton.disabled = true;
 }
 
 taskAddButton.addEventListener("click", taskAddHandler);
@@ -47,11 +47,11 @@ taskTitleInput.addEventListener("keyup", function (e) {
 	}
 });
 
-taskTitleInput.addEventListener("keydown",function(e){
+taskTitleInput.addEventListener("keydown", function (e) {
 	if (e.key === "Enter") {
 		taskAddHandler();
 	}
-})
+});
 
 /**
  * Add the task object to tasks array, save it, and render it on the dom
