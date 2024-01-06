@@ -47,7 +47,7 @@ taskTitleInput.addEventListener("keyup", function (e) {
 	}
 });
 
-taskTitleInput.addEventListener("keydown",function(){
+taskTitleInput.addEventListener("keydown",function(e){
 	if (e.key === "Enter") {
 		taskAddHandler();
 	}
